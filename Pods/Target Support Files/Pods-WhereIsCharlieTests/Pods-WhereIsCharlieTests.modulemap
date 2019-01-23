@@ -1,0 +1,6 @@
+framework module Pods_WhereIsCharlieTests {
+  umbrella header "Pods-WhereIsCharlieTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
