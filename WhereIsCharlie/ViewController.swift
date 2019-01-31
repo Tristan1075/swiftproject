@@ -84,17 +84,37 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             
             location.forEach { loc in
                 let metroArea = loc["metroArea"] as? [String: Any]
-                let id = metroArea!["id"] as! String
-
+                let id = metroArea!["id"] as! Int
+                
                 var request = "https://api.songkick.com/api/3.0/metro_areas/"
-                request += id
+                request += String(id)
                 request += "/calendar.json?apikey="
                 request += songKickToken
                 
                 Alamofire.request(request).responseJSON { res in
-                    print(res)
+                    guard let json = res.result.value as? [String: Any],
+                    let resultsPage2 = json["resultsPage"] as? [String: Any],
+                    let results2 = resultsPage2["results"] as? [String: Any],
+                    let events = results2["event"] as? [[String: Any]]
+                    else {
+                        return
+                    }
+                    
+                    
+                    events.forEach { event in
+                        guard let location = event["location"] as? [String: Any],
+                        let longitude = location["lng"] as? Double,
+                        let latitude = location["lat"] as? Double
+                        else {
+                                return
+                        }
+                        
+                        let position = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+                        let marker = GMSMarker(position: position)
+                        marker.title = "Hello World"
+                        marker.map = self.mapView
+                    }
                 }
-
             }
             
             
