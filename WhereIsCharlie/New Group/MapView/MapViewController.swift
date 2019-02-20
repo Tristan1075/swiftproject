@@ -58,6 +58,13 @@ class MapViewController: UIViewController {
             
         })
         self.mapView.delegate = self
+        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .organize, target: self, action: #selector(self.touchPrintFav))
+    }
+    
+    @objc func touchPrintFav() {
+        let next = FavViewController.newInstance()
+        self.navigationController?.pushViewController(next, animated: true)
     }
     
     

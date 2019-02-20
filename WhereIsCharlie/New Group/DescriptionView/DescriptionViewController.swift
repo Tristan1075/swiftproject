@@ -45,9 +45,25 @@ class DescriptionViewController: UIViewController {
             self.type.text = event["type"] as? String
             self.date.text = start["date"] as? String
             self.time.text = start["time"] as? String
+            
+            
+            
+            self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(self.touchAddFav))
+            
+            
     
         })
     
+    }
+    
+    @objc func touchAddFav() {
+        print("TouchAddFav");
+        let alert = UIAlertController(title: "Favori ajouté", message: "", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+            }))
+        self.present(alert, animated: true, completion: nil)
+        
+        
     }
     
     

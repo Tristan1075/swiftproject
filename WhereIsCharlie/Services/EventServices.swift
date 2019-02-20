@@ -78,7 +78,21 @@ public class EventServices {
             completion(event)
         }
     }
+    
+    public func addFav(_ id: String, completion: @escaping (Bool) -> Void) {
+        
+        
+        Alamofire.request("", method: .post, parameters: [id : id], encoding: JSONEncoding.default).response { res in
+            completion(res.response?.statusCode == 201)
+    }
 }
+
+
+
+}
+    
+    
+
 
 
 
