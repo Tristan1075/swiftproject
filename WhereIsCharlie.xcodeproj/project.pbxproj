@@ -15,6 +15,7 @@
 		F95B15CD221D5AF700FE1771 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95B15CB221D5AF700FE1771 /* MapViewController.swift */; };
 		F95B15CE221D5AF700FE1771 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F95B15CC221D5AF700FE1771 /* MapViewController.xib */; };
 		F95B15D1221D5BAC00FE1771 /* EventServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95B15D0221D5BAC00FE1771 /* EventServices.swift */; };
+		F95B15D7221D62F600FE1771 /* Marker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95B15D6221D62F600FE1771 /* Marker.swift */; };
 		F9D46DA721CBD97A003BFAEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D46DA621CBD97A003BFAEF /* AppDelegate.swift */; };
 		F9D46DAE21CBD97B003BFAEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9D46DAD21CBD97B003BFAEF /* Assets.xcassets */; };
 		F9D46DB121CBD97B003BFAEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9D46DAF21CBD97B003BFAEF /* LaunchScreen.storyboard */; };
@@ -43,7 +44,7 @@
 		3E089D6D27BFBC885A7F2382 /* Pods_WhereIsCharlieTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhereIsCharlieTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CA413422212708600DEB661 /* WhereIsCharlie-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WhereIsCharlie-Bridging-Header.h"; sourceTree = "<group>"; };
 		5CA413482212757400DEB661 /* DescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
-		5CA413492212757400DEB661 /* DescriptionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = DescriptionViewController.xib; path = ../DescriptionViewController.xib; sourceTree = "<group>"; };
+		5CA413492212757400DEB661 /* DescriptionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DescriptionViewController.xib; sourceTree = "<group>"; };
 		65CB7E9117516F5A4F290044 /* Pods-WhereIsCharlieUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhereIsCharlieUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WhereIsCharlieUITests/Pods-WhereIsCharlieUITests.release.xcconfig"; sourceTree = "<group>"; };
 		824B08E77B9AD4A2CAC1F362 /* Pods-WhereIsCharlieTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhereIsCharlieTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WhereIsCharlieTests/Pods-WhereIsCharlieTests.release.xcconfig"; sourceTree = "<group>"; };
 		8B8F5A88A01D2AA555473BB9 /* Pods_WhereIsCharlie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhereIsCharlie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -55,6 +56,7 @@
 		F95B15CB221D5AF700FE1771 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		F95B15CC221D5AF700FE1771 /* MapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
 		F95B15D0221D5BAC00FE1771 /* EventServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventServices.swift; sourceTree = "<group>"; };
+		F95B15D6221D62F600FE1771 /* Marker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Marker.swift; sourceTree = "<group>"; };
 		F9D46DA321CBD97A003BFAEF /* WhereIsCharlie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhereIsCharlie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9D46DA621CBD97A003BFAEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F9D46DAD21CBD97B003BFAEF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -127,6 +129,41 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		F95B15D2221D609800FE1771 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				F95B15D4221D60DA00FE1771 /* DescriptionView */,
+				F95B15D3221D60C700FE1771 /* MapView */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		F95B15D3221D60C700FE1771 /* MapView */ = {
+			isa = PBXGroup;
+			children = (
+				F95B15CB221D5AF700FE1771 /* MapViewController.swift */,
+				F95B15CC221D5AF700FE1771 /* MapViewController.xib */,
+			);
+			path = MapView;
+			sourceTree = "<group>";
+		};
+		F95B15D4221D60DA00FE1771 /* DescriptionView */ = {
+			isa = PBXGroup;
+			children = (
+				5CA413482212757400DEB661 /* DescriptionViewController.swift */,
+				5CA413492212757400DEB661 /* DescriptionViewController.xib */,
+			);
+			path = DescriptionView;
+			sourceTree = "<group>";
+		};
+		F95B15D5221D62D000FE1771 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F95B15D6221D62F600FE1771 /* Marker.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		F9D46D9A21CBD97A003BFAEF = {
 			isa = PBXGroup;
 			children = (
@@ -152,16 +189,14 @@
 		F9D46DA521CBD97A003BFAEF /* WhereIsCharlie */ = {
 			isa = PBXGroup;
 			children = (
+				F95B15D5221D62D000FE1771 /* Models */,
+				F95B15D2221D609800FE1771 /* New Group */,
 				F95B15CF221D5BA000FE1771 /* Services */,
-				5CA413492212757400DEB661 /* DescriptionViewController.xib */,
-				5CA413482212757400DEB661 /* DescriptionViewController.swift */,
 				F9D46DA621CBD97A003BFAEF /* AppDelegate.swift */,
 				F9D46DAD21CBD97B003BFAEF /* Assets.xcassets */,
 				F9D46DAF21CBD97B003BFAEF /* LaunchScreen.storyboard */,
 				F9D46DB221CBD97B003BFAEF /* Info.plist */,
 				5CA413422212708600DEB661 /* WhereIsCharlie-Bridging-Header.h */,
-				F95B15CB221D5AF700FE1771 /* MapViewController.swift */,
-				F95B15CC221D5AF700FE1771 /* MapViewController.xib */,
 			);
 			path = WhereIsCharlie;
 			sourceTree = "<group>";
@@ -429,6 +464,7 @@
 				5CA4134A2212757400DEB661 /* DescriptionViewController.swift in Sources */,
 				F95B15CD221D5AF700FE1771 /* MapViewController.swift in Sources */,
 				F9D46DA721CBD97A003BFAEF /* AppDelegate.swift in Sources */,
+				F95B15D7221D62F600FE1771 /* Marker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,18 +7,24 @@
 //
 
 import UIKit
+import GoogleMaps
 
 class DescriptionViewController: UIViewController {
     
     
-    class func newInstance() -> DescriptionViewController{
+    var position: CLLocationCoordinate2D!
+    
+    class func newInstance(position: CLLocationCoordinate2D) -> DescriptionViewController{
         let dvc = DescriptionViewController()
+        dvc.position = position
         return dvc
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+        print(position.longitude)
         // Do any additional setup after loading the view.
     }
     

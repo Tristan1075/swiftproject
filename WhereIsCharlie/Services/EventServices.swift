@@ -18,7 +18,7 @@ public class EventServices {
         
     }
     
-    public func getEvents(currentLocation: CLLocation, completion: @escaping (CLLocationCoordinate2D) -> Void) {
+    public func getEvents(currentLocation: CLLocation, completion: @escaping ([String: Any]) -> Void) {
         
         
         var requestLocation = "https://api.songkick.com/api/3.0/search/locations.json?location=geo:"
@@ -62,10 +62,8 @@ public class EventServices {
                             else {
                                 return
                         }
-                        
-                        let position = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
-                        
-                        completion(position)
+                                                
+                        completion(event)
                     }
                 }
             }
