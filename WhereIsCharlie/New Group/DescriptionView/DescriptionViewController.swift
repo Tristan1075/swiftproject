@@ -12,6 +12,9 @@ import GoogleMaps
 class DescriptionViewController: UIViewController {
     
     
+    @IBOutlet weak var nom: UILabel!
+    @IBOutlet weak var type: UILabel!
+    
     var id: String!
     
     class func newInstance(id: String) -> DescriptionViewController{
@@ -23,10 +26,19 @@ class DescriptionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
         EventServices.default.getEventById(id: id, completion: {
-            event in
+            eventResult in
             
+            guard let resultsPage = eventResult["resultsPage"] as? [String: Any],
+            let results = resultsPage["results"] as? [String: Any],
+            let event = results["event"] as? [String: Any]
+            else {
+                    return
+            }
+            
+            self.nom.text = event["displayName"] as? String
+            self.type.text = event["type"] as? String
+    
         })
     
     }

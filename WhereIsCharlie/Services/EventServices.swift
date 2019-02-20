@@ -71,7 +71,11 @@ public class EventServices {
         
         Alamofire.request(requestEvent).responseJSON { (response) in
             
-            print(response)
+            guard let event = response.result.value as? [String: Any]
+            else {
+                return
+            }
+            completion(event)
         }
     }
 }
