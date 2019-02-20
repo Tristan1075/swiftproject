@@ -79,16 +79,9 @@ public class EventServices {
         }
     }
     
-    public func addFav(_ id: String, completion: @escaping (Bool) -> Void) {
-        
-        
-        Alamofire.request("", method: .post, parameters: [id : id], encoding: JSONEncoding.default).response { res in
-            completion(res.response?.statusCode == 201)
+    public func addFav(_ idEvent: String) {
+        Alamofire.request("http://127.0.0.1:3000/api/events", method: .post, parameters: [idEvent : idEvent], encoding: JSONEncoding.default)
     }
-}
-
-
-
 }
     
     

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class FavViewController: UIViewController {
     
@@ -17,19 +18,19 @@ class FavViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        Alamofire.request("http://127.0.0.1:3000/api/events").responseJSON {(res) in
+            
+            guard let event = res.result.value as? [String:Any]
+                else {
+                    return
+            }
+            print(event)
+           
+        }
 
-        // Do any additional setup after loading the view.
     }
 
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

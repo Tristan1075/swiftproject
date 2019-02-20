@@ -57,13 +57,11 @@ class DescriptionViewController: UIViewController {
     }
     
     @objc func touchAddFav() {
-        print("TouchAddFav");
         let alert = UIAlertController(title: "Favori ajouté", message: "", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
-            }))
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in }))
         self.present(alert, animated: true, completion: nil)
         
-        
+        EventServices.default.addFav(id)
     }
     
     
