@@ -61,9 +61,8 @@ extension MapViewController: GMSMapViewDelegate {
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
         print("Clicked on marker")
         
-        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "nextView") as! DescriptionViewController
-        self.present(nextViewController, animated:true, completion:nil)
+        let next = DescriptionViewController.newInstance()
+        self.navigationController?.pushViewController(next, animated: true)
         
         return true
     }
