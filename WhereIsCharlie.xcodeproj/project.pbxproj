@@ -12,14 +12,14 @@
 		5804602DE8543EFE4A2B3FEA /* Pods_WhereIsCharlieTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E089D6D27BFBC885A7F2382 /* Pods_WhereIsCharlieTests.framework */; };
 		5CA4134A2212757400DEB661 /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA413482212757400DEB661 /* DescriptionViewController.swift */; };
 		5CA4134B2212757400DEB661 /* DescriptionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CA413492212757400DEB661 /* DescriptionViewController.xib */; };
+		F95B15CD221D5AF700FE1771 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95B15CB221D5AF700FE1771 /* MapViewController.swift */; };
+		F95B15CE221D5AF700FE1771 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F95B15CC221D5AF700FE1771 /* MapViewController.xib */; };
+		F95B15D1221D5BAC00FE1771 /* EventServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95B15D0221D5BAC00FE1771 /* EventServices.swift */; };
 		F9D46DA721CBD97A003BFAEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D46DA621CBD97A003BFAEF /* AppDelegate.swift */; };
-		F9D46DA921CBD97A003BFAEF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D46DA821CBD97A003BFAEF /* ViewController.swift */; };
-		F9D46DAC21CBD97A003BFAEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9D46DAA21CBD97A003BFAEF /* Main.storyboard */; };
 		F9D46DAE21CBD97B003BFAEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9D46DAD21CBD97B003BFAEF /* Assets.xcassets */; };
 		F9D46DB121CBD97B003BFAEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9D46DAF21CBD97B003BFAEF /* LaunchScreen.storyboard */; };
 		F9D46DBC21CBD97B003BFAEF /* WhereIsCharlieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D46DBB21CBD97B003BFAEF /* WhereIsCharlieTests.swift */; };
 		F9D46DC721CBD97B003BFAEF /* WhereIsCharlieUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D46DC621CBD97B003BFAEF /* WhereIsCharlieUITests.swift */; };
-		F9D46DD721CC0027003BFAEF /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D46DD621CC0027003BFAEF /* Location.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +43,7 @@
 		3E089D6D27BFBC885A7F2382 /* Pods_WhereIsCharlieTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhereIsCharlieTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CA413422212708600DEB661 /* WhereIsCharlie-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WhereIsCharlie-Bridging-Header.h"; sourceTree = "<group>"; };
 		5CA413482212757400DEB661 /* DescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
-		5CA413492212757400DEB661 /* DescriptionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DescriptionViewController.xib; sourceTree = "<group>"; };
+		5CA413492212757400DEB661 /* DescriptionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = DescriptionViewController.xib; path = ../DescriptionViewController.xib; sourceTree = "<group>"; };
 		65CB7E9117516F5A4F290044 /* Pods-WhereIsCharlieUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhereIsCharlieUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WhereIsCharlieUITests/Pods-WhereIsCharlieUITests.release.xcconfig"; sourceTree = "<group>"; };
 		824B08E77B9AD4A2CAC1F362 /* Pods-WhereIsCharlieTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhereIsCharlieTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WhereIsCharlieTests/Pods-WhereIsCharlieTests.release.xcconfig"; sourceTree = "<group>"; };
 		8B8F5A88A01D2AA555473BB9 /* Pods_WhereIsCharlie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhereIsCharlie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,10 +52,11 @@
 		C81D665192A38C24CC4AC459 /* Pods-WhereIsCharlieTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhereIsCharlieTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WhereIsCharlieTests/Pods-WhereIsCharlieTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D7AAE74D2040DFA867738870 /* Pods_WhereIsCharlieUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhereIsCharlieUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F140D5CAFE51AC45488672C0 /* Pods-WhereIsCharlie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhereIsCharlie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WhereIsCharlie/Pods-WhereIsCharlie.debug.xcconfig"; sourceTree = "<group>"; };
+		F95B15CB221D5AF700FE1771 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		F95B15CC221D5AF700FE1771 /* MapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
+		F95B15D0221D5BAC00FE1771 /* EventServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventServices.swift; sourceTree = "<group>"; };
 		F9D46DA321CBD97A003BFAEF /* WhereIsCharlie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhereIsCharlie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9D46DA621CBD97A003BFAEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F9D46DA821CBD97A003BFAEF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F9D46DAB21CBD97A003BFAEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F9D46DAD21CBD97B003BFAEF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F9D46DB021CBD97B003BFAEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F9D46DB221CBD97B003BFAEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -65,7 +66,6 @@
 		F9D46DC221CBD97B003BFAEF /* WhereIsCharlieUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhereIsCharlieUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9D46DC621CBD97B003BFAEF /* WhereIsCharlieUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhereIsCharlieUITests.swift; sourceTree = "<group>"; };
 		F9D46DC821CBD97B003BFAEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F9D46DD621CC0027003BFAEF /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,11 +119,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F95B15CF221D5BA000FE1771 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F95B15D0221D5BAC00FE1771 /* EventServices.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		F9D46D9A21CBD97A003BFAEF = {
 			isa = PBXGroup;
 			children = (
-				5CA413482212757400DEB661 /* DescriptionViewController.swift */,
-				5CA413492212757400DEB661 /* DescriptionViewController.xib */,
 				F9D46DA521CBD97A003BFAEF /* WhereIsCharlie */,
 				F9D46DBA21CBD97B003BFAEF /* WhereIsCharlieTests */,
 				F9D46DC521CBD97B003BFAEF /* WhereIsCharlieUITests */,
@@ -146,14 +152,16 @@
 		F9D46DA521CBD97A003BFAEF /* WhereIsCharlie */ = {
 			isa = PBXGroup;
 			children = (
+				F95B15CF221D5BA000FE1771 /* Services */,
+				5CA413492212757400DEB661 /* DescriptionViewController.xib */,
+				5CA413482212757400DEB661 /* DescriptionViewController.swift */,
 				F9D46DA621CBD97A003BFAEF /* AppDelegate.swift */,
-				F9D46DA821CBD97A003BFAEF /* ViewController.swift */,
-				F9D46DAA21CBD97A003BFAEF /* Main.storyboard */,
 				F9D46DAD21CBD97B003BFAEF /* Assets.xcassets */,
 				F9D46DAF21CBD97B003BFAEF /* LaunchScreen.storyboard */,
 				F9D46DB221CBD97B003BFAEF /* Info.plist */,
-				F9D46DD621CC0027003BFAEF /* Location.swift */,
 				5CA413422212708600DEB661 /* WhereIsCharlie-Bridging-Header.h */,
+				F95B15CB221D5AF700FE1771 /* MapViewController.swift */,
+				F95B15CC221D5AF700FE1771 /* MapViewController.xib */,
 			);
 			path = WhereIsCharlie;
 			sourceTree = "<group>";
@@ -289,7 +297,7 @@
 				F9D46DB121CBD97B003BFAEF /* LaunchScreen.storyboard in Resources */,
 				5CA4134B2212757400DEB661 /* DescriptionViewController.xib in Resources */,
 				F9D46DAE21CBD97B003BFAEF /* Assets.xcassets in Resources */,
-				F9D46DAC21CBD97A003BFAEF /* Main.storyboard in Resources */,
+				F95B15CE221D5AF700FE1771 /* MapViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,9 +425,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9D46DA921CBD97A003BFAEF /* ViewController.swift in Sources */,
+				F95B15D1221D5BAC00FE1771 /* EventServices.swift in Sources */,
 				5CA4134A2212757400DEB661 /* DescriptionViewController.swift in Sources */,
-				F9D46DD721CC0027003BFAEF /* Location.swift in Sources */,
+				F95B15CD221D5AF700FE1771 /* MapViewController.swift in Sources */,
 				F9D46DA721CBD97A003BFAEF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -456,14 +464,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F9D46DAA21CBD97A003BFAEF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F9D46DAB21CBD97A003BFAEF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F9D46DAF21CBD97B003BFAEF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -597,6 +597,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = WhereIsCharlie/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -618,6 +619,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = WhereIsCharlie/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
