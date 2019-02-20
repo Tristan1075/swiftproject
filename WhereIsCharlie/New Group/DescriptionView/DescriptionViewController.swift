@@ -14,6 +14,10 @@ class DescriptionViewController: UIViewController {
     
     @IBOutlet weak var nom: UILabel!
     @IBOutlet weak var type: UILabel!
+    @IBOutlet weak var date: UILabel!
+    @IBOutlet weak var time: UILabel!
+    
+    
     
     var id: String!
     
@@ -31,13 +35,16 @@ class DescriptionViewController: UIViewController {
             
             guard let resultsPage = eventResult["resultsPage"] as? [String: Any],
             let results = resultsPage["results"] as? [String: Any],
-            let event = results["event"] as? [String: Any]
+            let event = results["event"] as? [String: Any],
+            let start = event["start"] as? [String: Any]
             else {
                     return
             }
             
             self.nom.text = event["displayName"] as? String
             self.type.text = event["type"] as? String
+            self.date.text = start["date"] as? String
+            self.time.text = start["time"] as? String
     
         })
     
