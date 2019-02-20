@@ -11,10 +11,12 @@ import GoogleMaps
 
 public class Marker: GMSMarker {
     
+    var id: Int
     var longitude: Double
     var latitude: Double
         
-    init(longitude: Double, latitude: Double) {
+    init(id: Int, longitude: Double, latitude: Double) {
+        self.id = id
         self.longitude = longitude
         self.latitude = latitude
 

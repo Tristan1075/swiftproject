@@ -54,19 +54,24 @@ public class EventServices {
                         else {
                             return
                     }
-                    
                     events.forEach { event in
-                        guard let location = event["location"] as? [String: Any],
-                            let longitude = location["lng"] as? Double,
-                            let latitude = location["lat"] as? Double
-                            else {
-                                return
-                        }
-                                                
                         completion(event)
                     }
                 }
             }
+        }
+    }
+    
+    
+    public func getEventById(id: String, completion: @escaping ([String: Any]) -> Void) {
+        var requestEvent = "https://api.songkick.com/api/3.0/events/"
+        requestEvent += id
+        requestEvent += ".json?apikey="
+        requestEvent += songKickToken
+        
+        Alamofire.request(requestEvent).responseJSON { (response) in
+            
+            print(response)
         }
     }
 }

@@ -42,7 +42,7 @@ class MapViewController: UIViewController {
         EventServices.default.getEvents(currentLocation: currentLocation, completion: {
             events in
             
-            guard let id = events["id"] else {
+            guard let id = events["id"] as? Int else {
                 return
             }
             
@@ -53,7 +53,7 @@ class MapViewController: UIViewController {
                     return
             }
             
-            let marker = Marker(longitude: longitude, latitude: latitude)
+            let marker = Marker(id: id, longitude: longitude, latitude: latitude)
             self.showMarkers(marker: marker)
             
         })
@@ -65,6 +65,7 @@ class MapViewController: UIViewController {
         let m = marker
         m.position = CLLocationCoordinate2D(latitude: marker.latitude, longitude: marker.longitude)
         m.map = mapView
+        m.title = String(marker.id)
     }
 }
 
@@ -73,7 +74,7 @@ extension MapViewController: GMSMapViewDelegate {
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
         print("Clicked on marker")
         
-        let next = DescriptionViewController.newInstance(position: marker.position)
+        let next = DescriptionViewController.newInstance(id: marker.title!)
         self.navigationController?.pushViewController(next, animated: true)
         
         return true

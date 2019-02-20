@@ -12,11 +12,11 @@ import GoogleMaps
 class DescriptionViewController: UIViewController {
     
     
-    var position: CLLocationCoordinate2D!
+    var id: String!
     
-    class func newInstance(position: CLLocationCoordinate2D) -> DescriptionViewController{
+    class func newInstance(id: String) -> DescriptionViewController{
         let dvc = DescriptionViewController()
-        dvc.position = position
+        dvc.id = id
         return dvc
     }
 
@@ -24,9 +24,13 @@ class DescriptionViewController: UIViewController {
         super.viewDidLoad()
 
         
-        print(position.longitude)
-        // Do any additional setup after loading the view.
+        EventServices.default.getEventById(id: id, completion: {
+            event in
+            
+        })
+    
     }
+    
     
     @IBAction func Lieux(_ sender: UITextField) {
     }
