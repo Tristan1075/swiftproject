@@ -80,7 +80,7 @@ public class EventServices {
     }
     
     public func addFav(_ idEvent: String) {
-        Alamofire.request("http://127.0.0.1:3000/api/events", method: .post, parameters: [idEvent : idEvent], encoding: JSONEncoding.default)
+        Alamofire.request("http://127.0.0.1:3000/api/favorites", method: .post, parameters: ["idEvent" : idEvent], encoding: JSONEncoding.default)
     }
 }
     

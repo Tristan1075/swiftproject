@@ -20,13 +20,26 @@ class FavViewController: UIViewController {
         super.viewDidLoad()
         
         
-        Alamofire.request("http://127.0.0.1:3000/api/events").responseJSON {(res) in
+        Alamofire.request("http://127.0.0.1:3000/api/favorites").responseJSON {(res) in
             
-            guard let event = res.result.value as? [String:Any]
-                else {
-                    return
+            guard let favorites = res.result.value as? [[String : Any]]
+            else {
+                return
             }
-            print(event)
+            
+            favorites.forEach({ favorite in
+                EventServices.default.getEventById(id: favorite["idEvent"] as! String, completion: {
+                    eventResult in
+                    guard let resultsPage = eventResult["resultsPage"] as? [String: Any],
+                        let results = resultsPage["results"] as? [String: Any],
+                        let event = results["event"] as? [String: Any]
+                        else {
+                            return
+                    }
+                    print(event)
+                })
+            })
+            
            
         }
 

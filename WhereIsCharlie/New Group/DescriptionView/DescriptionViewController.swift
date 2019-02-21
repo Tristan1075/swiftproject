@@ -46,11 +46,7 @@ class DescriptionViewController: UIViewController {
             self.date.text = start["date"] as? String
             self.time.text = start["time"] as? String
             
-            
-            
             self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(self.touchAddFav))
-            
-            
     
         })
     
