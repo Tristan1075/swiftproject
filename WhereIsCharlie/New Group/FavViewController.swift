@@ -22,7 +22,7 @@ class FavViewController: UIViewController {
         super.viewDidLoad()
         self.tableView.delegate = self as! UITableViewDelegate
         self.tableView.dataSource = self as! UITableViewDataSource
-        self.tableView.register(UINib(nibName: "MovieTableViewCell", bundle: nil), forCellReuseIdentifier: FavViewController)
+        self.tableView.register(UINib(nibName: "FavViewController", bundle: nil), forCellReuseIdentifier: FavViewController)
         
         
         Alamofire.request("http://127.0.0.1:3000/api/favorites").responseJSON {(res) in
