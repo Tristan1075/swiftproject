@@ -11,6 +11,8 @@ import Alamofire
 
 class FavViewController: UIViewController {
     
+    @IBOutlet weak var tableView: UITableView!
+    
     class func newInstance() -> FavViewController{
         let dvc = FavViewController()
         return dvc
@@ -18,6 +20,9 @@ class FavViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.delegate = self as! UITableViewDelegate
+        self.tableView.dataSource = self as! UITableViewDataSource
+        self.tableView.register(UINib(nibName: "MovieTableViewCell", bundle: nil), forCellReuseIdentifier: FavViewController)
         
         
         Alamofire.request("http://127.0.0.1:3000/api/favorites").responseJSON {(res) in

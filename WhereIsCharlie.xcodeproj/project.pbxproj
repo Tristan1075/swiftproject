@@ -14,6 +14,8 @@
 		5CA4134B2212757400DEB661 /* DescriptionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CA413492212757400DEB661 /* DescriptionViewController.xib */; };
 		5CA41352221D9D3600DEB661 /* FavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA41350221D9D3600DEB661 /* FavViewController.swift */; };
 		5CA41353221D9D3600DEB661 /* FavViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CA41351221D9D3600DEB661 /* FavViewController.xib */; };
+		5CA4135A221EABB300DEB661 /* FavTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA41358221EABB300DEB661 /* FavTableViewCell.swift */; };
+		5CA4135B221EABB300DEB661 /* FavTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CA41359221EABB300DEB661 /* FavTableViewCell.xib */; };
 		F95B15CD221D5AF700FE1771 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95B15CB221D5AF700FE1771 /* MapViewController.swift */; };
 		F95B15CE221D5AF700FE1771 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F95B15CC221D5AF700FE1771 /* MapViewController.xib */; };
 		F95B15D1221D5BAC00FE1771 /* EventServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95B15D0221D5BAC00FE1771 /* EventServices.swift */; };
@@ -49,6 +51,8 @@
 		5CA413492212757400DEB661 /* DescriptionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DescriptionViewController.xib; sourceTree = "<group>"; };
 		5CA41350221D9D3600DEB661 /* FavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavViewController.swift; sourceTree = "<group>"; };
 		5CA41351221D9D3600DEB661 /* FavViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavViewController.xib; sourceTree = "<group>"; };
+		5CA41358221EABB300DEB661 /* FavTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavTableViewCell.swift; sourceTree = "<group>"; };
+		5CA41359221EABB300DEB661 /* FavTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavTableViewCell.xib; sourceTree = "<group>"; };
 		65CB7E9117516F5A4F290044 /* Pods-WhereIsCharlieUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhereIsCharlieUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WhereIsCharlieUITests/Pods-WhereIsCharlieUITests.release.xcconfig"; sourceTree = "<group>"; };
 		824B08E77B9AD4A2CAC1F362 /* Pods-WhereIsCharlieTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhereIsCharlieTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WhereIsCharlieTests/Pods-WhereIsCharlieTests.release.xcconfig"; sourceTree = "<group>"; };
 		8B8F5A88A01D2AA555473BB9 /* Pods_WhereIsCharlie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhereIsCharlie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,6 +144,8 @@
 				F95B15D3221D60C700FE1771 /* MapView */,
 				5CA41350221D9D3600DEB661 /* FavViewController.swift */,
 				5CA41351221D9D3600DEB661 /* FavViewController.xib */,
+				5CA41358221EABB300DEB661 /* FavTableViewCell.swift */,
+				5CA41359221EABB300DEB661 /* FavTableViewCell.xib */,
 			);
 			path = "New Group";
 			sourceTree = "<group>";
@@ -340,6 +346,7 @@
 				5CA4134B2212757400DEB661 /* DescriptionViewController.xib in Resources */,
 				F9D46DAE21CBD97B003BFAEF /* Assets.xcassets in Resources */,
 				F95B15CE221D5AF700FE1771 /* MapViewController.xib in Resources */,
+				5CA4135B221EABB300DEB661 /* FavTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,6 +475,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CA41352221D9D3600DEB661 /* FavViewController.swift in Sources */,
+				5CA4135A221EABB300DEB661 /* FavTableViewCell.swift in Sources */,
 				F95B15D1221D5BAC00FE1771 /* EventServices.swift in Sources */,
 				5CA4134A2212757400DEB661 /* DescriptionViewController.swift in Sources */,
 				F95B15CD221D5AF700FE1771 /* MapViewController.swift in Sources */,
